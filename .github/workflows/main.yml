@@ -18,6 +18,8 @@ jobs:
           java TextToMDConvertor
       - name: Git Push
         run: |
+          git config --global user.email local@github.com
+          git config --global user.name local
           git add .
           git commit -m "Updating Readme.md"
           git push
