@@ -1,0 +1,9 @@
+name: text to md 
+run-name: ${{github.actor}} is running convertor.
+on: [push]
+jobs:
+  Setup-Java-JDK:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-java@v4.0.0
+      - run: java -v
