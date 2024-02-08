@@ -12,7 +12,13 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
-      - run: java -version
-      - run: javac TextToMDConvertor.java
-      - run: java TextToMDConvertor
+      - name: Updating Readme
+        run: |
+          javac TextToMDConvertor.java
+          java TextToMDConvertor
+      - name: Git Push
+        run: |
+          git add .
+          git commit -m "Updating Readme.md"
+          git push
       
