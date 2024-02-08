@@ -5,10 +5,14 @@ jobs:
   Setup-Java-JDK:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-java@v4
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+      - name: Java setup
+        uses: actions/setup-java@v4
         with:
-          distribution: 'temurin' # See 'Supported distributions' for available options
+          distribution: 'temurin'
           java-version: '21'
       - run: java -version
       - run: javac TextToMDConvertor.java
       - run: java TextToMDConvertor
+      
