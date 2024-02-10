@@ -8,5 +8,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.1.1
       - name: Using external action
-        uses: sidsriedu/readme-genererator-action@main
+        uses: sidsriedu/readme-genererator-action@v1.1
       
